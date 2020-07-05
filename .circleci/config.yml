@@ -56,9 +56,9 @@ workflows:
   build:
     jobs:
       - init
-      - build-api
-        requires:
-          - init
-      - build-ui
-        requires:
-          -inites
+      - build-api:
+          requires:
+            - init
+      - build-ui:
+          requires:
+            -init
