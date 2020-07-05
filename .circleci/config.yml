@@ -21,7 +21,7 @@ jobs:
           command: npm run lint
       - run:
           name: Run tests with updated snapshots
-          command: npm run test -u
+          command: npm test -- --coverage --updateSnapshot
       - run:
           name: Install api
           command: npm --prefix ./api install
