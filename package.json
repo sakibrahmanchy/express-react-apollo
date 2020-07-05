@@ -19,6 +19,7 @@
     "uuid": "^8.2.0"
   },
   "scripts": {
+    "lint": "tslint -c tslint.json -p tsconfig.json",
     "build:api": "cd api && npm start",
     "start:client": "react-scripts start",
     "build": "react-scripts build",

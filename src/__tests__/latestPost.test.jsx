@@ -1,7 +1,7 @@
 import { MockedProvider } from '@apollo/react-testing';
 import React from 'react';
 import { render, wait, screen } from '@testing-library/react';
-import LatestPost, { GET_LATEST_POST_QUERY } from './latestPost';
+import LatestPost, { GET_LATEST_POST_QUERY } from '../latestPost';
 
 const mocks = [
   {

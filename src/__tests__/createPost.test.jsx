@@ -5,9 +5,9 @@ import {
 } from '@testing-library/react';
 import { ApolloProvider } from '@apollo/react-hooks';
 import { createMockClient } from 'mock-apollo-client';
-import Posts, { POSTS } from './Posts';
-import CreatePosts, { CREATE_POST_MUTATION } from './createPosts';
-import { GET_LATEST_POST_QUERY } from './latestPost';
+import Posts, { POSTS } from '../Posts';
+import CreatePosts, { CREATE_POST_MUTATION } from '../createPosts';
+import { GET_LATEST_POST_QUERY } from '../latestPost';
 
 const mockClient = createMockClient();
 
