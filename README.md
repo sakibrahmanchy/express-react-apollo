@@ -8,7 +8,7 @@ Install api first.
 
 Install react front end.
 
-`cd .. & npm i`
+`cd .. && npm i`
 
 Run project 
 
