@@ -17,17 +17,17 @@ jobs:
             - ~/.cache
           key: 'v1-dependencies-{{ checksum "package.json" }}'
       - run:
-          - name: Run lints
-          - command: npm run lint
+          name: Run lints
+          command: npm run lint
       - run:
-          - name: Run tests with updated snapshots
-          - command: npm run test -u
+          name: Run tests with updated snapshots
+          command: npm run test -u
       - run:
-          - name: Install api
-          - command: npm -prefix ./api && npm install
+          name: Install api
+          command: npm --prefix ./api install
       - run:
-          - name: Lint api
-          - command: npm run prebuild
+          name: Lint api
+          command: npm --prefix ./api run prebuild
       - run:
-          - name: test api
-          - commandL: npm run test
+          name: test api
+          command: npm --prefix ./api run test
