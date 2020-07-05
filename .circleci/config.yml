@@ -1,7 +1,9 @@
+---
+version: 2.1
 executors:
   node:
     docker:
-      - image: 'circleci/node:12'
+      - image: 'circleci/node:12-browsers'
     shell: /bin/bash
     working_directory: ~/app
     resource_class: small
