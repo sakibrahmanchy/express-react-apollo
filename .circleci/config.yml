@@ -1,43 +1,33 @@
 jobs:
   build:
     docker:
-      - image: circleci/node:12.9.1-browsers
-
+      - image: 'circleci/node:12.9.1-browsers'
     working_directory: ~/repo
-
     steps:
       - checkout
-
       - restore_cache:
           keys:
-            - v1-dependencies-{{ checksum "package.json" }}
-            # fallback to using the latest cache if no exact match is found
+            - 'v1-dependencies-{{ checksum "package.json" }}'
             - v1-dependencies-
       - run: npm install
-
       - save_cache:
           paths:
             - node_modules
             - ~/.npm
             - ~/.cache
-          key: v1-dependencies-{{ checksum "package.json" }}
-
+          key: 'v1-dependencies-{{ checksum "package.json" }}'
       - run:
           - name: Run lints
           - command: npm run lint
-
       - run:
-        - name: Run tests with updated snapshots
-        - command: npm run test -u
-
+          - name: Run tests with updated snapshots
+          - command: npm run test -u
       - run:
-        - name: Install api
-        - command: npm -prefix ./api && npm install
-
+          - name: Install api
+          - command: npm -prefix ./api && npm install
       - run:
-        - name: Lint api
-        - command: npm run prebuild
-
-      -run:
-        - name: test api
-        - commandL: npm run test
+          - name: Lint api
+          - command: npm run prebuild
+      - run:
+          - name: test api
+          - commandL: npm run test
