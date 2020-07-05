@@ -61,4 +61,4 @@ workflows:
             - init
       - build-ui:
           requires:
-            -init
+            - init
