@@ -1,0 +1,29 @@
+{
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint:latest",
+        "tslint-config-airbnb"
+    ],
+    "jsRules": {
+        "no-unused-expression": true
+    },
+    "rules": {
+        "no-submodule-imports": false,
+        "array-type": false,
+        "member-access": [false],
+        "interface-name": [false],
+        "no-floating-promises": true,
+        "no-implicit-dependencies": false,
+        "object-literal-sort-keys": false,
+        "no-console": false,
+        "import-name": false
+    },
+    "linterOptions": {
+        "exclude": [
+            "src/migration/**/*.ts",
+            "dist/**/*.*",
+            "src/serviceWorker.js"
+        ]
+    },
+    "rulesDirectory": []
+}

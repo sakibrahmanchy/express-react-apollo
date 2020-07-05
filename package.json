@@ -1,0 +1,74 @@
+{
+  "name": "react-apollo-express",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@apollo/react-hooks": "^3.1.5",
+    "@apollo/react-testing": "^3.1.4",
+    "apollo-boost": "^0.4.9",
+    "graphql": "^15.2.0",
+    "moment": "^2.27.0",
+    "path": "^0.12.7",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.1",
+    "react-test-renderer": "^16.13.1",
+    "typescript": "^3.9.6",
+    "util": "^0.12.3",
+    "uuid": "^8.2.0"
+  },
+  "scripts": {
+    "build:api": "cd api && npm start",
+    "start:client": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "start": "npm run build && (npm run build:api)"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!src/index.jsx"
+    ]
+  },
+  "devDependencies": {
+    "mock-apollo-client": "^0.4.0",
+    "moment": "^2.27.0",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "@types/express": "^4.17.6",
+    "@types/jest": "^26.0.3",
+    "@types/node": "^14.0.14",
+    "@types/react": "^16.9.41",
+    "@types/react-dom": "^16.9.8",
+    "tslint": "5.11.0",
+    "tslint-config-airbnb": "^5.11.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^6.6.0",
+    "eslint-import-resolver-webpack": "^0.11.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jest": "^23.0.3",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4",
+    "prettier": "^2.0.5",
+    "tsconfig-paths": "^3.5.0",
+    "webpack": "^4.42.0"
+  }
+}
