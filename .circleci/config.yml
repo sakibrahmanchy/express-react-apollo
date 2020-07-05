@@ -1,8 +1,15 @@
+executors:
+  node:
+    docker:
+      - image: 'circleci/node:12'
+    shell: /bin/bash
+    working_directory: ~/app
+    resource_class: small
 jobs:
   init:
     docker:
       - image: 'circleci/node:12.9.1-browsers'
-    working_directory: ~/repo
+    executor: node
     steps:
       - checkout
       - restore_cache:
@@ -17,10 +24,7 @@ jobs:
             - ~/.cache
           key: 'v1-dependencies-{{ checksum "package.json" }}'
   build-ui:
-    docker:
-      - image: 'circleci/node:12.9.1-browsers'
-      - attach_workspace:
-          at: ~/repo
+    executor: node
     steps:
       - run:
           name: Run lints
@@ -34,10 +38,7 @@ jobs:
       - store_artifacts:
           path: coverage
   build-api:
-    docker:
-      - image: 'circleci/node:12.9.1-browsers'
-      - attach_workspace:
-          at: ~/repo
+    executor: node
     steps:
       - run:
           name: Install api
