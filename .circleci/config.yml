@@ -24,9 +24,9 @@ jobs:
           command: npm test -- --coverage --updateSnapshot
       - run:
           name: "Run Jest and Collect Coverage Reports"
-          command: jest --collectCoverage=true
+          command: npm run test --collectCoverage=true
       - store_artifacts:
-          path: coverages/frontend
+          path: coverage
       - run:
           name: Install api
           command: npm --prefix ./api install
@@ -40,4 +40,4 @@ jobs:
           name: Collect api coverage reports
           command: npm --prefix ./api run test --collectCoverage=true
       - store_artifacts:
-          path: coverages/api
+          path: ./api/coverage
