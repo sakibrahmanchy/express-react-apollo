@@ -25,3 +25,5 @@ yarn-error.log*
 /src/__tests__/__snapshots__
 /db
 /api/dist
+.idea
+/api/.idea
