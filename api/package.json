@@ -39,8 +39,8 @@
     "webpack": "^4.42.0"
   },
   "scripts": {
-    "prebuild": "npm install && tslint -c tslint.json -p tsconfig.json --fix",
-    "build": "tsc",
+    "prebuild": "npm install",
+    "build": "tslint -c tslint.json -p tsconfig.json --fix && tsc",
     "prestart": "npm run build",
     "start": "node .",
     "test": "jest --runInBand"
