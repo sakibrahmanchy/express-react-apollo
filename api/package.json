@@ -40,7 +40,7 @@
   },
   "scripts": {
     "prebuild": "npm install",
-    "build": "tslint -c tslint.json -p tsconfig.json --fix && tsc",
+    "build": "tsc",
     "prestart": "npm run build",
     "start": "node .",
     "test": "jest --runInBand"
