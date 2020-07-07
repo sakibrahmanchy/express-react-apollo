@@ -27,7 +27,6 @@ export default function CreatePosts() {
   if (loading) {
     return (
       <div className="loading">
-        Loading...
         <div className="line" />
         <div className="line" />
         <div className="line" />
