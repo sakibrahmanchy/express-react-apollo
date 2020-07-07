@@ -24,7 +24,16 @@ export default function CreatePosts() {
     }],
   });
 
-  if (loading) { return <p>Loading...</p>; }
+  if (loading) {
+    return (
+      <div className="loading">
+        Loading...
+        <div className="line" />
+        <div className="line" />
+        <div className="line" />
+      </div>
+    );
+  }
 
   const handleClickEvent = () => {
     const content = input.current.value;
