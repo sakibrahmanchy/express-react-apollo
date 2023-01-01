@@ -32,11 +32,11 @@
     "prettier": "^2.0.5",
     "supertest": "^4.0.2",
     "ts-jest": "^26.1.1",
-    "tsconfig-paths": "^3.5.0",
+    "tsconfig-paths": "^3.10.1",
     "tslint": "^6.1.2",
     "tslint-config-airbnb": "^5.11.1",
     "typescript": "^3.9.6",
-    "webpack": "^4.42.0"
+    "webpack": "^5.75.0"
   },
   "scripts": {
     "prebuild": "npm install",
